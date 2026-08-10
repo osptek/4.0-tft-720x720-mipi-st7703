@@ -46,8 +46,7 @@
 
 <p align="center"><img alt="YDP400BT001-V4" src="./images/YDP400BT001-V4.png" width="320" /></p>
 
-**说明：** 模组。
-
+**说明：** 带触摸（GT911）。
 ---
 
 ## 如何切换分支
