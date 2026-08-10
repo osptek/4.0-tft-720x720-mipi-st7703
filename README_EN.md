@@ -47,6 +47,7 @@ Repo id: `4.0-tft-720x720-mipi-st7703`
 <p align="center"><img alt="YDP400BT001-V4" src="./images/YDP400BT001-V4.png" width="320" /></p>
 
 **Notes:** With touch (GT911).
+
 ---
 
 ## How to Switch Branches
