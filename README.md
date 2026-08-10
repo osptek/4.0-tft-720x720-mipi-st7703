@@ -2,7 +2,7 @@
 
 <h1 align="center">OSPTEK 4.0″ TFT 720×720（ST7703 · MIPI）</h1>
 
-<p align="center"><b>方形 TFT / IPS 模组 · MIPI · ST7703 · 电容触摸</b></p>
+<p align="center"><b>TFT 模组 · MIPI · ST7703 · 多版本索引</b></p>
 
 <p align="center"><a href="./README_EN.md">English</a> | 简体中文</p>
 
@@ -13,111 +13,58 @@
   <img alt="Driver: ST7703" src="https://img.shields.io/badge/Driver-ST7703-E7352C?style=flat-square" />
 </p>
 
-<p align="center"><img alt="OSPTEK 4.0 寸 720×720 TFT MIPI 模组（ST7703）宣传图" src="./images/product.png" width="640" /></p>
-
 ## 目录
 
-- [产品简介](#产品简介)
-- [规格参数](#规格参数)
-- [示例工程](#示例工程)
-- [仓库结构](#仓库结构)
-- [相关资料](#相关资料)
+- [说明](#说明)
+- [版本一览](#版本一览)
+- [YDP400BT001-V4](#ydp400bt001-v4)
+- [如何切换分支](#如何切换分支)
 - [购买链接](#购买链接)
 - [技术支持](#技术支持)
 
 ---
 
-## 产品简介
+## 说明
 
-OSPTEK **4.0 寸 720×720 TFT（IPS）** 是一款 **MIPI** 接口彩色显示模组，显示驱动为 **ST7703**，触摸驱动为 **GT911**。适合方形 HMI、仪表与中尺寸交互面板等场景。
+本仓库收录 **4.0 寸 720×720 TFT（MIPI · ST7703）** 显示模组资料。
+
+**`main` 为导航页**（仓库默认分支）。下表可快速浏览各版本；点击「说明」跳转到本页下方的详细介绍。需要某一版本的完整内容时，请切换到对应**版本分支**（方法见下文）。
 
 规格标识（仓库名）：`4.0-tft-720x720-mipi-st7703`
 
-当前模组版本：**YDP400BT001-V4**。电气与外形细节以 [`docs/YDP_400_BT_001_V4_058148418c.pdf`](./docs/YDP_400_BT_001_V4_058148418c.pdf) 为准。
+---
 
-## 规格参数
+## 版本一览
 
-| 项目 | 规格 |
-| ---- | ---- |
-| 尺寸 | 4.0 英寸 |
-| 类型 | TFT / IPS（彩色） |
-| 分辨率 | 720×720 |
-| 接口 | MIPI |
-| 驱动 IC | ST7703 |
-| 触摸驱动 | GT911 |
+| 版本 | 宣传图 | 说明 |
+| ---- | ------ | ---- |
+| YDP400BT001-V4 | <img alt="YDP400BT001-V4" src="./images/YDP400BT001-V4.png" width="120" /> | [查看详情](#ydp400bt001-v4) |
 
-> 完整外形尺寸、FPC 定义、供电与时序以产品规格书 / 驱动手册为准。
+---
 
-## 示例工程
+## YDP400BT001-V4
 
-| 说明 | 路径 |
-| ---- | ---- |
-| ESP32-P4 · ST7703 MIPI + esp-lvgl-port / LVGL8 | [`examples/P4-IDF_ST7703-MIPI_ESP-LVGL-PORT_V8/`](./examples/P4-IDF_ST7703-MIPI_ESP-LVGL-PORT_V8/) |
-| ESP32-P4 · ST7703 MIPI + esp-lvgl-port / LVGL9 | [`examples/P4-IDF_ST7703-MIPI_ESP-LVGL-PORT_V9/`](./examples/P4-IDF_ST7703-MIPI_ESP-LVGL-PORT_V9/) |
-| ESP32-P4 · ST7703 MIPI + GT911 + LVGL8 | [`examples/P4-IDF_ST7703-MIPI_GT911-I2C_LVGL-V8/`](./examples/P4-IDF_ST7703-MIPI_GT911-I2C_LVGL-V8/) |
-| ESP32-P4 · LVGL8 游戏示例（PVZ） | [`examples/P4-IDF_ST7703-MIPI_ESP-LVGL-PORT_V8_PVZ/`](./examples/P4-IDF_ST7703-MIPI_ESP-LVGL-PORT_V8_PVZ/) |
-| ESP32-P4 · LVGL + TE 防撕裂 | [`examples/with-te/p4-idf_st7703-mipi_lvgl_common_demo/`](./examples/with-te/p4-idf_st7703-mipi_lvgl_common_demo/) |
-| ESP32-P4 · EAF 动画播放 | [`examples/eaf/p4-idf_st7703-mipi_esp-lv-eaf-player/`](./examples/eaf/p4-idf_st7703-mipi_esp-lv-eaf-player/) |
-| ESP32-P4 · JPEG 解码 | [`examples/jpg-decoder/p4-idf_st7703-mipi_jpeg-decode/`](./examples/jpg-decoder/p4-idf_st7703-mipi_jpeg-decode/) |
-| ESP32-P4 · JPEG 解码 + LVGL9 | [`examples/jpg-decoder/p4-idf_st7703-mipi_jpeg-decode_lvgl-v9/`](./examples/jpg-decoder/p4-idf_st7703-mipi_jpeg-decode_lvgl-v9/) |
-| ESP32-P4 · MJPEG 解码 | [`examples/mjpeg/p4-idf_st7703-mipi_mjpeg-decode/`](./examples/mjpeg/p4-idf_st7703-mipi_mjpeg-decode/) |
-| ESP32-P4 · MJPEG 解码 + LVGL9 | [`examples/mjpeg/p4-idf_st7703-mipi_mjpeg-decode_lvgl-v9/`](./examples/mjpeg/p4-idf_st7703-mipi_mjpeg-decode_lvgl-v9/) |
-| ESP32-P4 · 摄像头视频 LCD 显示 | [`examples/camera/p4-idf_st7703-mipi_video-lcd-display/`](./examples/camera/p4-idf_st7703-mipi_video-lcd-display/) |
-| ESP32-P4 · ST7703 MIPI DSI 显示测试 | [`examples/display-touch-test/st7703_mipi_dsi/`](./examples/display-touch-test/st7703_mipi_dsi/) |
-| ESP32-P4 · Arduino + ST7703 + LVGL | [`examples/arduino/esp32p4-arduino_st7703_lvgl/`](./examples/arduino/esp32p4-arduino_st7703_lvgl/) |
-| ESP32-P4 · Arduino MJPEG 解码 | [`examples/arduino/esp32p4_arduino_mjpeg-decode/`](./examples/arduino/esp32p4_arduino_mjpeg-decode/) |
-| ESP32-P4 · Arduino SDMMC + ES8311 I2S | [`examples/arduino/esp32p4_sdmmc_es8311-i2s/`](./examples/arduino/esp32p4_sdmmc_es8311-i2s/) |
+<p align="center"><img alt="YDP400BT001-V4" src="./images/YDP400BT001-V4.png" width="320" /></p>
 
-## 仓库结构
+**说明：** 模组。
 
-```text
-4.0-tft-720x720-mipi-st7703/
-├── README.md
-├── README_EN.md
-├── MODULE_VERSION.md
-├── LICENSE
-├── images/          # README 用图
-├── docs/            # 规格书、驱动手册、初始化、转接板等
-└── examples/        # 示例工程
-```
+---
 
-## 相关资料
+## 如何切换分支
 
-### 本产品资料
+完整产品资料在各**版本分支**中；`main` 仅作导航。
 
-| 资料 | 链接 |
-| ---- | ---- |
-| 产品规格书（YDP400BT001-V4） | [`docs/YDP_400_BT_001_V4_058148418c.pdf`](./docs/YDP_400_BT_001_V4_058148418c.pdf) |
-| 驱动 IC 数据手册（ST7703） | [`docs/ST7703DA-H3_DS_V0.01_20200819.pdf`](./docs/ST7703DA-H3_DS_V0.01_20200819.pdf) |
-| 触摸 IC 数据手册（GT911） | [`docs/GT_911_Datasheet_20140718_Rev_08_daa11566d3.pdf`](./docs/GT_911_Datasheet_20140718_Rev_08_daa11566d3.pdf) |
-| 初始化序列（文本） | [`docs/2-ST7703_QV040YNQ-N80_IPS_Code_2Power_V5.5_20230731.txt`](./docs/2-ST7703_QV040YNQ-N80_IPS_Code_2Power_V5.5_20230731.txt) |
-| 初始化命令表（`st7703.h`） | [`docs/st7703.h`](./docs/st7703.h) |
-| 2.1 / 4″ 转接板（P4） | [`docs/2.1&4“转接板SCRREN_P4_yuying.pdf`](./docs/2.1%264%E2%80%9C%E8%BD%AC%E6%8E%A5%E6%9D%BFSCRREN_P4_yuying.pdf) |
+- **网页：** 在仓库页左上角打开分支下拉框，选择与料号对应的版本分支即可。
+- **命令行：** 克隆本仓库后执行 `git checkout <版本分支名>`；若本地已有仓库，先 `git fetch` 再切换。
 
-### 示例工程
-
-- [ESP32-P4 ST7703 MIPI + LVGL8](./examples/P4-IDF_ST7703-MIPI_ESP-LVGL-PORT_V8/)
-- [ESP32-P4 ST7703 MIPI + LVGL9](./examples/P4-IDF_ST7703-MIPI_ESP-LVGL-PORT_V9/)
-- [ESP32-P4 ST7703 MIPI + GT911 + LVGL8](./examples/P4-IDF_ST7703-MIPI_GT911-I2C_LVGL-V8/)
-- [ESP32-P4 LVGL8 游戏示例（PVZ）](./examples/P4-IDF_ST7703-MIPI_ESP-LVGL-PORT_V8_PVZ/)
-- [ESP32-P4 LVGL + TE](./examples/with-te/p4-idf_st7703-mipi_lvgl_common_demo/)
-- [ESP32-P4 EAF 动画播放](./examples/eaf/p4-idf_st7703-mipi_esp-lv-eaf-player/)
-- [ESP32-P4 JPEG 解码](./examples/jpg-decoder/p4-idf_st7703-mipi_jpeg-decode/)
-- [ESP32-P4 JPEG 解码 + LVGL9](./examples/jpg-decoder/p4-idf_st7703-mipi_jpeg-decode_lvgl-v9/)
-- [ESP32-P4 MJPEG 解码](./examples/mjpeg/p4-idf_st7703-mipi_mjpeg-decode/)
-- [ESP32-P4 MJPEG 解码 + LVGL9](./examples/mjpeg/p4-idf_st7703-mipi_mjpeg-decode_lvgl-v9/)
-- [ESP32-P4 摄像头视频 LCD 显示](./examples/camera/p4-idf_st7703-mipi_video-lcd-display/)
-- [ESP32-P4 ST7703 MIPI DSI 显示测试](./examples/display-touch-test/st7703_mipi_dsi/)
-- [ESP32-P4 Arduino + ST7703 + LVGL](./examples/arduino/esp32p4-arduino_st7703_lvgl/)
-- [ESP32-P4 Arduino MJPEG 解码](./examples/arduino/esp32p4_arduino_mjpeg-decode/)
-- [ESP32-P4 Arduino SDMMC + ES8311 I2S](./examples/arduino/esp32p4_sdmmc_es8311-i2s/)
+---
 
 ## 购买链接
 
 <p align="center">
   <a href="https://shop110742373.taobao.com/"><img alt="淘宝官方店铺" src="https://img.shields.io/badge/淘宝-官方店铺-FF6A00?style=for-the-badge" /></a>
   &nbsp;&nbsp;
-  <a href="https://www.aliexpress.com/store/1105701619"><img alt="速卖通官方店铺" src="https://img.shields.io/badge/速卖通-官方店铺-FF6A00?style=for-the-badge" /></a>
+  <a href="https://www.aliexpress.com/store/1105701619"><img alt="速卖通官方店铺" src="https://img.shields.io/badge/速卖通-官方店铺-E62E04?style=for-the-badge&logo=aliexpress&logoColor=white" /></a>
 </p>
 
 **国内（淘宝）**
@@ -127,6 +74,8 @@ OSPTEK **4.0 寸 720×720 TFT（IPS）** 是一款 **MIPI** 接口彩色显示�
 **海外（AliExpress）**
 
 - 店铺：[OSPTEK Official Store](https://www.aliexpress.com/store/1105701619)
+
+---
 
 ## 技术支持
 
