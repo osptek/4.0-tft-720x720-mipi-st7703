@@ -18,7 +18,6 @@
 - [About](#about)
 - [Versions](#versions)
 - [YDP400BT001-V4](#ydp400bt001-v4)
-- [How to Switch Branches](#how-to-switch-branches)
 - [Where to Buy](#where-to-buy)
 - [Support](#support)
 
@@ -28,7 +27,7 @@
 
 This repository holds materials for the **4.0″ 720×720 TFT (MIPI · ST7703)** module family.
 
-**`main` is the navigation page** (repository default). Use the table below for a quick scan; click **Details** to jump to the section on this page. For a given version’s full content, switch to that **version branch** (see below).
+The **root README is the navigation page**. Use the table below for a quick scan; open **Full docs** to enter that **part-number folder** under `versions/` (product page, datasheets, and examples live there).
 
 Repo id: `4.0-tft-720x720-mipi-st7703`
 
@@ -36,26 +35,19 @@ Repo id: `4.0-tft-720x720-mipi-st7703`
 
 ## Versions
 
-| Version | Image | Notes |
-| ------- | ----- | ----- |
-| YDP400BT001-V4 | <img alt="YDP400BT001-V4" src="./images/YDP400BT001-V4.png" width="120" /> | [Details](#ydp400bt001-v4) |
+| Version | Image | Summary | Full docs |
+| ------- | ----- | ------- | --------- |
+| YDP400BT001-V4 | <img alt="YDP400BT001-V4" src="./versions/YDP400BT001-V4/images/product.png" width="120" /> | [Summary](#ydp400bt001-v4) | [Full docs](./versions/YDP400BT001-V4/) |
 
 ---
 
 ## YDP400BT001-V4
 
-<p align="center"><img alt="YDP400BT001-V4" src="./images/YDP400BT001-V4.png" width="320" /></p>
+<p align="center"><img alt="YDP400BT001-V4" src="./versions/YDP400BT001-V4/images/product.png" width="320" /></p>
 
 **Notes:** With touch (GT911).
 
----
-
-## How to Switch Branches
-
-Full product materials are on each **version branch**; `main` is navigation only.
-
-- **Web:** open the branch dropdown at the top left of the repository page and select the branch that matches your part number.
-- **CLI:** after cloning, run `git checkout <version-branch>`; if the repo is already local, `git fetch` first, then switch.
+Full product page, datasheets, and examples: [versions/YDP400BT001-V4/](./versions/YDP400BT001-V4/)
 
 ---
 
