@@ -2,7 +2,11 @@
  * SPDX-FileCopyrightText: 2024 Espressif Systems (Shanghai) CO LTD
  *
  * SPDX-License-Identifier: CC0-1.0
+ *
+ * Modifications Copyright 2026 OSPTEK
+ * https://github.com/osptek
  */
+
 #include "esp_err.h"
 #include "esp_log.h"
 #include "esp_video_init.h"
